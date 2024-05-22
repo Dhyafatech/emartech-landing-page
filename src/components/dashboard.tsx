@@ -2,8 +2,8 @@ import { FC } from "react";
 import { Box, Button, styled } from "@mui/material";
 import { Header } from "./header";
 
-const StyledBackgroundBoxImage = styled(Box) ({
-  backgroundImage: "url('assets/landing-image-desktop.jpg')",
+const StyledBackgroundBoxImage = styled(Box)({
+  backgroundImage: "url('/assets/landing-image-desktop.jpg')",
   backgroundSize: "cover",
   backgroundPosition: "center",
   backgroundRepeat: "no-repeat",
@@ -16,7 +16,7 @@ const StyledBackgroundBoxImage = styled(Box) ({
   },
   "@media(min-width: 768px)": {
     display: "block",
-    backgroundImage: "url('assets/landing-image-desktop.jpg')",
+    backgroundImage: "url('/assets/landing-image-desktop.jpg')",
     minHeight: "90vh",
     marginBottom: "100px",
   },
@@ -25,15 +25,16 @@ const StyledBackgroundBoxImage = styled(Box) ({
   },
 });
 
-const StyledBackgroundBoxGradient = styled(Box) ({
-  background: "linear-gradient(263.69deg, rgba(6, 150, 88, 0.4) 43.5%, #000000 93.5%)",
+const StyledBackgroundBoxGradient = styled(Box)({
+  background:
+    "linear-gradient(263.69deg, rgba(6, 150, 88, 0.4) 43.5%, #000000 93.5%)",
   opacity: "0.5",
   width: "100%",
   height: "100%",
   position: "absolute",
 });
 
-export const ContainedBox = styled(Box) ({
+export const ContainedBox = styled(Box)({
   position: "inherit",
   paddingLeft: "30px",
   zIndex: "9",
@@ -116,24 +117,29 @@ export const ContainedBox = styled(Box) ({
 export const Dashboard: FC = () => {
   return (
     <StyledBackgroundBoxImage>
-      <StyledBackgroundBoxGradient/>
+      <StyledBackgroundBoxGradient />
       <ContainedBox>
         <h4 className="sub-heading-text white-color">
           <span className="line-span-holder">
-            <span className="line-span"/>
-            <span className="line-span"/>
-          </span>GENERAL CONTRACTING
+            <span className="line-span" />
+            <span className="line-span" />
+          </span>
+          GENERAL CONTRACTING
         </h4>
-        <h1 className="heading-text white-color">Build Everything You Needs</h1>
+        <h1 className="heading-text white-color">Build Everything You Need</h1>
         <p className="para-text white-color">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          Lorem Ipsum has been  the industry's standard dummy text ever since the 1500s
+          Emartech revolutionizes project monitoring, resource management, and
+          procurement in construction, offering promoters real-time insights and
+          tools for streamlined project oversight and issue tracking.
         </p>
-        <Button className="para-text white-color auth-btn" sx= {{ border: "none", borderRadius: "0", width: "auto" }}>
+        <Button
+          className="para-text white-color auth-btn"
+          sx={{ border: "none", borderRadius: "0", width: "auto" }}
+        >
           Get a Quote
         </Button>
       </ContainedBox>
-      <Header/>
+      <Header />
     </StyledBackgroundBoxImage>
   );
 };

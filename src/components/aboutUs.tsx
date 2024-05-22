@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Box, styled } from "@mui/material";
+import { Box, styled, Typography } from "@mui/material";
 
 export const StyledBackgroundBox = styled(Box)<any>(
   ({ backgroundImageUrl }) => ({
@@ -10,7 +10,7 @@ export const StyledBackgroundBox = styled(Box)<any>(
     flex: "1",
     minHeight: "48vh",
     "&.image-box": {
-      backgroundImage: "url('assets/build.jpg')",
+      backgroundImage: "url('/assets/build.jpg')",
     },
     "&.content-box": {
       display: "flex",
@@ -135,7 +135,7 @@ export const AboutUs: FC = () => {
   return (
     <StyledBox className="flex-center">
       <StyledBackgroundBox
-        backgroundImageUrl={"url('assets/Rectangle 1363.jpg')"}
+        backgroundImageUrl={"url('/assets/Rectangle 1363.jpg')"}
         className="content-box"
       >
         <Box className="content-holder">
@@ -146,17 +146,28 @@ export const AboutUs: FC = () => {
             </span>
             ABOUT US
           </h4>
-          <h1 className="heading-text">Build Everything You Needs</h1>
-          <p className="para-text">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s
-          </p>
-          <p className="para-text">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s
-          </p>
+          <h1 className="heading-text">Build Everything You Need</h1>
+          <Typography
+            variant="body1"
+            className="para-text"
+            sx={{ textAlign: "justify" }}
+          >
+            Emartech is on a mission to redefine project management in the
+            construction industry through its revolutionary platform. Through
+            offering a seamless experience for promoters, suppliers and
+            stakeholders.
+          </Typography>
+          <Typography
+            variant="body1"
+            className="para-text"
+            sx={{ textAlign: "justify", paddingTop: "10px" }}
+          >
+            Emartech is aiming to simplify project monitoring, resource
+            management, and procurement processes. With real-time insights and
+            proactive notifications, promoters can stay ahead of the curve,
+            making informed decisions to drive project success. Embrace the
+            future of construction with Emartech by your side.
+          </Typography>
         </Box>
       </StyledBackgroundBox>
       <StyledBackgroundBox className="image-box"></StyledBackgroundBox>

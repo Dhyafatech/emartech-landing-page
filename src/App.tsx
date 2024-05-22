@@ -1,13 +1,17 @@
-import './App.css'
-import { LandingPage } from './pages/landingPage'
+import "./App.css";
+import { LandingPage } from "./pages/landingPage";
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import { baseTheme } from "./theme";
 
 function App() {
-
   return (
     <>
-     <LandingPage />
+      <ThemeProvider theme={baseTheme}>
+        <CssBaseline />
+        <LandingPage />
+      </ThemeProvider>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

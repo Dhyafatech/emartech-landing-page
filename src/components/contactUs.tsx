@@ -3,7 +3,7 @@ import { Box, Button, Container, TextField, styled } from "@mui/material";
 import { StyledBackgroundBox } from "./aboutUs";
 import { StyledBox } from "./ourServices";
 
-const StyledBackgroundBoxContact = styled(StyledBackgroundBox) ({
+const StyledBackgroundBoxContact = styled(StyledBackgroundBox)({
   minHeight: "48vh",
   "@media(min-width: 480px)": {
     minHeight: "75vh",
@@ -11,18 +11,15 @@ const StyledBackgroundBoxContact = styled(StyledBackgroundBox) ({
   "@media(min-width: 768px)": {
     minHeight: "90vh",
   },
-  "@media(min-width: 900px)": {
-  },
-  "@media(min-width: 1080px)": {
-  },
+  "@media(min-width: 900px)": {},
+  "@media(min-width: 1080px)": {},
   "@media(min-width: 1260px)": {
     minHeight: "100vh",
   },
-  "@media(min-width: 1800px)": {
-  },
+  "@media(min-width: 1800px)": {},
 });
 
-export const StyledBoxContact = styled(StyledBox) ({
+export const StyledBoxContact = styled(StyledBox)({
   ".flex-center.align-start": {
     alignItems: "flex-start",
   },
@@ -74,9 +71,7 @@ export const StyledBoxContact = styled(StyledBox) ({
       },
     },
   },
-  "@media(min-width: 480px)": {
-  
-  },
+  "@media(min-width: 480px)": {},
   "@media(min-width: 768px)": {
     ".auth-btn": {
       padding: "10px 60px",
@@ -89,14 +84,10 @@ export const StyledBoxContact = styled(StyledBox) ({
       ".para-text-holder": {
         order: "2",
       },
-    }
+    },
   },
-  "@media(min-width: 900px)": {
-    
-  },
-  "@media(min-width: 1080px)": {
-    
-  },
+  "@media(min-width: 900px)": {},
+  "@media(min-width: 1080px)": {},
   "@media(min-width: 1260px)": {
     ".auth-btn": {
       padding: "15px 40px",
@@ -107,7 +98,7 @@ export const StyledBoxContact = styled(StyledBox) ({
       padding: "15px 40px",
     },
   },
-})
+});
 
 export const ContactUs: FC = () => {
   const [name, setName] = useState("");
@@ -124,14 +115,15 @@ export const ContactUs: FC = () => {
 
   return (
     <StyledBoxContact className="flex-center">
-      <StyledBackgroundBoxContact 
-        backgroundImageUrl={"url('assets/Rectangle 1363.jpg')"} 
-        className="content-box">
+      <StyledBackgroundBoxContact
+        backgroundImageUrl={"url('/assets/Rectangle 1363.jpg')"}
+        className="content-box"
+      >
         <form onSubmit={handleSubmit}>
           <h4 className="sub-heading-text">
             <span className="line-span-holder">
-              <span className="line-span"/>
-              <span className="line-span"/>
+              <span className="line-span" />
+              <span className="line-span" />
             </span>
             CONTACT US
           </h4>
@@ -142,8 +134,11 @@ export const ContactUs: FC = () => {
             </Box>
             <Box className="para-text-holder">
               <p className="para-text">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been 
-                the industry's standard dummy text ever since the 1500s
+                Get your construction project off the ground with Emartech's
+                tailored solutions. Contact us today to request a personalized
+                quote, and let our expert team assist you in achieving your
+                project goals efficiently and effectively. Build smarter with
+                Emartech.
               </p>
             </Box>
           </Box>
@@ -176,32 +171,56 @@ export const ContactUs: FC = () => {
                 rows={4}
                 margin="normal"
               />
-              <Button className="para-text white-color auth-btn radius-0" variant="contained" type="submit">
+              <Button
+                className="para-text white-color auth-btn radius-0"
+                variant="contained"
+                type="submit"
+              >
                 Send Now
               </Button>
             </Box>
             <Box className="para-text-holder">
-              <Box className="para-text margin-0 mb-30" sx={{ display: "flex", alignItems: "flex-start" }}>
-                <img src="assets/Phone.png"/>
+              <Box
+                className="para-text margin-0 mb-30"
+                sx={{ display: "flex", alignItems: "flex-start" }}
+              >
+                <img src="/assets/Phone.png" />
                 <Container>
                   <h4 className="para-text margin-0">OUR PHONE</h4>
-                  <p className="para-text margin-0 opacity-50">+971 456 7890 - Office</p>
-                  <p className="para-text margin-0 opacity-50">+971 456 7890 - Fax</p>
+                  <p className="para-text margin-0 opacity-50">
+                    +966 11 232 7775
+                  </p>
+                  {/* <p className="para-text margin-0 opacity-50">
+                    +971 456 7890 - Fax
+                  </p> */}
                 </Container>
               </Box>
-              <Box className="para-text margin-0 mb-30" sx={{ display: "flex", alignItems: "flex-start" }}>
-                <img src="assets/Email.png"/>
+              <Box
+                className="para-text margin-0 mb-30"
+                sx={{ display: "flex", alignItems: "flex-start" }}
+              >
+                <img src="/assets/Email.png" />
                 <Container>
                   <h4 className="para-text margin-0">OUR EMAIL</h4>
-                  <p className="para-text margin-0 opacity-50">sales@gmail.com</p>
-                  <p className="para-text margin-0 opacity-50">info@gmail.com</p>
+                  <p className="para-text margin-0 opacity-50">
+                    Admin@Emarahtech.com
+                  </p>
+                  {/* <p className="para-text margin-0 opacity-50">
+                    info@gmail.com
+                  </p> */}
                 </Container>
               </Box>
-              <Box className="para-text margin-0 mb-30" sx={{ display: "flex", alignItems: "flex-start" }}>
-                <img src="assets/Location on.png"/>
+              <Box
+                className="para-text margin-0 mb-30"
+                sx={{ display: "flex", alignItems: "flex-start" }}
+              >
+                <img src="/assets/Location on.png" />
                 <Container>
                   <h4 className="para-text margin-0">OUR LOCATION</h4>
-                  <p className="para-text margin-0 opacity-50">Box No. 214396, Dubai</p>
+                  <p className="para-text margin-0 opacity-50">
+                    2533 Street Al Imam Saoud Bin Faisal, Hiteen district 13512,
+                    Riyadh
+                  </p>
                 </Container>
               </Box>
             </Box>
