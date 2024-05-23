@@ -1,10 +1,9 @@
-import { FC, useEffect, useMemo, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import {
   Box,
   Button,
   Card,
   CardContent,
-  Container,
   Typography,
   styled,
 } from "@mui/material";
@@ -200,7 +199,7 @@ export const Testimonial: FC = () => {
                         </Typography>
                         <Typography
                           gutterBottom
-                          variant={windowWidth < 768 ? "subtitle2" : "h7"}
+                          variant={windowWidth < 768 ? "subtitle2" : "h6"}
                           sx={{ width: windowWidth < 768 ? "60%" : "100%" }}
                           component="div"
                         >
