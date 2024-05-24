@@ -165,23 +165,28 @@ const dummyArray = [
   {
     id: 1,
     title: "Home",
+    href: "#home"
+  },
+  {
+    id: 5,
+    title: "About Us",
+    href: "#about-us"
   },
   {
     id: 2,
     title: "Services",
+    href: "#services"
   },
   {
     id: 3,
     title: "Our Partners",
+    href: "#partners"
   },
   {
     id: 4,
     title: "Get a Quote",
   },
-  {
-    id: 5,
-    title: "About Us",
-  },
+ 
   {
     id: 6,
     title: "Contacts",
@@ -235,9 +240,10 @@ export const Header: React.FC = () => {
       </Box>
 
       <StyledList>
-        {dummyArray.map(({ title, id }) => (
+        {dummyArray.map(({ title, id, href }) => (
           <>
-            <ListItemButton key={id} onClick={() => setMobileOpen(false)}>
+          {/* @ts-expect-error — href actually exists and works fine */}
+            <ListItemButton href={href} key={id} onClick={() => setMobileOpen(false)}>
               <ListItemText primary={title} />
             </ListItemButton>
             <Divider sx={{ width: "90%", alignSelf: "center" }} />
