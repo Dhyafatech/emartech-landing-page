@@ -11,10 +11,18 @@ import { Testimonial } from "../components/testimonial";
 export const LandingPage: FC = () => {
   return (
     <Box>
+       <div id="home">
       <Dashboard/>
-      <AboutUs/>
-      <OurServices/>
-      <OurPartners/>
+      </div>
+      <div id="about-us">
+        <AboutUs/>
+      </div>
+      <div id="services">
+        <OurServices />
+      </div>
+      <div id="partners">
+        <OurPartners/>
+      </div>
       <Testimonial/>
       <ContactUs/>
       <Footer/>

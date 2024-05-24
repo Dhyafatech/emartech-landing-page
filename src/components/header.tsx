@@ -340,10 +340,11 @@ export const Header: React.FC = () => {
             <LogoImg src={EmartechWhiteLogo} alt="logo" />
           </Box>
           <NavLinks>
-            <StyledLink href="#">HOME</StyledLink>
-            <StyledLink href="#">SERVICES</StyledLink>
-            <StyledLink href="#">OUR PARTNERS</StyledLink>
-            <StyledLink href="#">ABOUT US</StyledLink>
+            <StyledLink href="#home">HOME</StyledLink>
+            <StyledLink href="#about-us">ABOUT US</StyledLink>
+            <StyledLink href="#services">SERVICES</StyledLink>
+            <StyledLink href="#partners">OUR PARTNERS</StyledLink>
+           
           </NavLinks>
           {/* <NavLinks
             links={[
