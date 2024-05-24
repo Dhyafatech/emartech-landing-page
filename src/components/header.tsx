@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { useState } from "react";
 import {
   AppBar,
   Box,
@@ -7,20 +7,17 @@ import {
   Drawer,
   Grid,
   IconButton,
-  InputBase,
   Link,
   List,
   ListItemButton,
   ListItemText,
   Menu,
   MenuItem,
-  TextField,
   Toolbar,
   Typography,
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import { StyledBackgroundBox } from "./aboutUs";
-import { StyledBoxContact } from "./contactUs";
+
 import EmartechWhiteLogo from "../assets/emartech-logo-white.svg";
 
 import MenuIcon from "@mui/icons-material/Menu";
@@ -29,12 +26,11 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import CloseIcon from "@mui/icons-material/Close";
-import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import LanguageIcon from "@mui/icons-material/Language";
 import PersonIcon from "@mui/icons-material/Person";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import LogoutIcon from "@mui/icons-material/Logout";
+
 import { SearchComponent } from "./inputs";
 
 const StyledAppBar = styled(AppBar)`
@@ -135,10 +131,6 @@ const RowContainer = styled(Grid)`
 const SearchContainer = styled(Grid)`
   display: flex;
   margin: 0px 50px;
-`;
-
-const SearchInput = styled(InputBase)`
-  margin: 8px;
 `;
 
 const CartContainer = styled(Grid)`
